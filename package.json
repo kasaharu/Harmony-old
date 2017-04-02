@@ -6,6 +6,8 @@
   "author": "Wataru.Kasahara <kasahara1019@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
     "webpack": "^2.3.2"
   }
 }
