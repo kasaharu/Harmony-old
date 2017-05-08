@@ -5,7 +5,7 @@ import AddTodo from '../components/AddTodo'
 import TodoList from '../components/TodoList'
 import Footer from '../components/Footer'
 
-class App extends Component {
+class Main extends Component {
   render() {
     // Injected by connect() call:
     const { dispatch, visibleTodos, visibilityFilter } = this.props
@@ -30,7 +30,7 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+Main.propTypes = {
   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired
@@ -63,4 +63,4 @@ function select(state) {
 }
 
 // Wrap the component to inject dispatch and state into it
-export default connect(select)(App)
+export default connect(select)(Main)
