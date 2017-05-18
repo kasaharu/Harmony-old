@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters } from '../actions'
-import AddTodo from '../components/AddTodo'
-import TodoList from '../components/TodoList'
-import Footer from '../components/Footer'
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters } from '../actions';
+import AddTodo from '../components/AddTodo';
+import TodoList from '../components/TodoList';
+import Footer from '../components/Footer';
 
 class Main extends Component {
   render() {
     // Injected by connect() call:
-    const { dispatch, visibleTodos, visibilityFilter } = this.props
+    const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <div>
         <AddTodo
@@ -26,7 +26,7 @@ class Main extends Component {
             dispatch(setVisibilityFilter(nextFilter))
           } />
       </div>
-    )
+    );
   }
 }
 
@@ -40,16 +40,16 @@ Main.propTypes = {
     'SHOW_COMPLETED',
     'SHOW_ACTIVE'
   ]).isRequired
-}
+};
 
 function selectTodos(todos, filter) {
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
-      return todos
+      return todos;
     case VisibilityFilters.SHOW_COMPLETED:
-      return todos.filter(todo => todo.completed)
+      return todos.filter(todo => todo.completed);
     case VisibilityFilters.SHOW_ACTIVE:
-      return todos.filter(todo => !todo.completed)
+      return todos.filter(todo => !todo.completed);
   }
 }
 
@@ -59,8 +59,8 @@ function select(state) {
   return {
     visibleTodos: selectTodos(state.todos, state.visibilityFilter),
     visibilityFilter: state.visibilityFilter
-  }
+  };
 }
 
 // Wrap the component to inject dispatch and state into it
-export default connect(select)(Main)
+export default connect(select)(Main);

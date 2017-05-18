@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 export default class AddTodo extends Component {
   render() {
@@ -9,18 +9,18 @@ export default class AddTodo extends Component {
           Add
         </button>
       </div>
-    )
+    );
   }
 
   handleClick(e) {
-    const node = this.refs.input
-    const text = node.value.trim()
-    this.props.onAddClick(text)
-    node.value = ''
+    const node = this.refs.input;
+    const text = node.value.trim();
+    this.props.onAddClick(text);
+    node.value = '';
   }
 }
 
 AddTodo.propTypes = {
   onAddClick: PropTypes.func.isRequired
-}
+};
 
