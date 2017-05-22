@@ -7,14 +7,14 @@ export default function todos(state = [], action) {
         ...state,
         {
           text: action.text,
-          completed: false
-        }
+          completed: false,
+        },
       ];
     case TOGGLE_TODO:
       return state.map((todo, index) => {
         if (index === action.index) {
           return Object.assign({}, todo, {
-            completed: !todo.completed
+            completed: !todo.completed,
           });
         }
         return todo;

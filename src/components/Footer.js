@@ -37,7 +37,7 @@ Footer.propTypes = {
   filter: PropTypes.oneOf([
     'SHOW_ALL',
     'SHOW_COMPLETED',
-    'SHOW_ACTIVE'
-  ]).isRequired
+    'SHOW_ACTIVE',
+  ]).isRequired,
 };
 

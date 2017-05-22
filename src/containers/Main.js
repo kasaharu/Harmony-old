@@ -33,13 +33,13 @@ class Main extends Component {
 Main.propTypes = {
   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
+    completed: PropTypes.bool.isRequired,
   })),
   visibilityFilter: PropTypes.oneOf([
     'SHOW_ALL',
     'SHOW_COMPLETED',
-    'SHOW_ACTIVE'
-  ]).isRequired
+    'SHOW_ACTIVE',
+  ]).isRequired,
 };
 
 function selectTodos(todos, filter) {
@@ -58,7 +58,7 @@ function selectTodos(todos, filter) {
 function select(state) {
   return {
     visibleTodos: selectTodos(state.todos, state.visibilityFilter),
-    visibilityFilter: state.visibilityFilter
+    visibilityFilter: state.visibilityFilter,
   };
 }
 
