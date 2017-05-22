@@ -9,3 +9,9 @@ $ yarn
 $ yarn run webpack
 $ open index.html
 ```
+
+* Lint check
+
+```
+$ yarn run eslint src/
+```
