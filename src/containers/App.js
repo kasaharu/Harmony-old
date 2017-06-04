@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { inputText, sendMessage } from '../actions';
 
+import TalkPane from './TalkPane';
+
 import Button from '../components/Button';
 import TextField from '../components/TextField';
 
@@ -23,6 +25,7 @@ class App extends React.Component {
           onChange={onChange}
         />
         <Button onClick={onClick} />
+        <TalkPane />
       </div>
     );
   }
