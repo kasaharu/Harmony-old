@@ -31,6 +31,10 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  editingText: React.PropTypes.string.isRequired,
+};
+
 function mapStateToProps(state) {
   return {
     editingText: state.editingText,

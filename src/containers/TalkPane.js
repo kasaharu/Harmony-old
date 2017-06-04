@@ -11,6 +11,10 @@ class TalkPane extends React.Component {
   }
 }
 
+TalkPane.propTypes = {
+  talkList: React.PropTypes.array.isRequired,
+};
+
 function mapStateToProps(state) {
   return {
     talkList: state.talkList,
