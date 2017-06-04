@@ -1,9 +1,13 @@
-import { INPUT_TEXT } from '../actions';
+import { INPUT_TEXT, SEND_MESSAGE } from '../actions';
 
-export default function editingText(state = '', action) {
+const initialState = '';
+
+export default function editingText(state = initialState, action) {
   switch (action.type) {
     case INPUT_TEXT:
       return action.payload;
+    case SEND_MESSAGE:
+      return initialState;
     default:
       return state;
   }
