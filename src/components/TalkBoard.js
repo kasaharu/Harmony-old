@@ -17,5 +17,5 @@ export default class TalkBoard extends React.Component {
 }
 
 TalkBoard.propTypes = {
-  talkList: React.PropTypes.array.isReqired,
+  talkList: React.PropTypes.array.isRequired,
 };
