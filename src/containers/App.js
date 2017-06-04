@@ -26,7 +26,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  editingText: React.Props.string.isRequired,
+  editingText: React.PropTypes.string.isRequired,
 };
 
 export default connect()(App);

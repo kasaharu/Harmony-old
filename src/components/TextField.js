@@ -5,7 +5,7 @@ export default class TextField extends React.Component {
     return (
       <input
         type="text"
-        value={this.props.editingText}
+        value={this.props.value}
         onChange={e => this.props.onChange(e.target.value)}
       />
     );
@@ -13,6 +13,6 @@ export default class TextField extends React.Component {
 }
 
 TextField.propTypes = {
-  editingText: React.Props.string.isRequired,
-  onChange: React.Props.func.isRequired,
+  value: React.PropTypes.string.isRequired,
+  onChange: React.PropTypes.func.isRequired,
 };
