@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { inputText } from '../actions';
+import { inputText, sendMessage } from '../actions';
 
 import Button from '../components/Button';
 import TextField from '../components/TextField';
@@ -12,6 +12,9 @@ class App extends React.Component {
     const onChange = (text) => {
       dispatch(inputText(text));
     };
+    const onClick = () => {
+      dispatch(sendMessage(this.props.editingText));
+    };
 
     return (
       <div>
@@ -19,7 +22,7 @@ class App extends React.Component {
           value={this.props.editingText}
           onChange={onChange}
         />
-        <Button />
+        <Button onClick={onClick} />
       </div>
     );
   }
