@@ -6,7 +6,7 @@ import TalkBoard from '../components/TalkBoard';
 class TalkPane extends React.Component {
   render() {
     return (
-      <TalkBoard />
+      <TalkBoard talkList={this.props.talkList} />
     );
   }
 }
