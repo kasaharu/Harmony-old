@@ -11,4 +11,10 @@ class TalkPane extends React.Component {
   }
 }
 
-export default connect()(TalkPane);
+function mapStateToProps(state) {
+  return {
+    talkList: state.talkList,
+  };
+}
+
+export default connect(mapStateToProps)(TalkPane);
