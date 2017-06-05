@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
@@ -9,7 +10,9 @@ const store = createStore(todoApp);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
   </Provider>,
   document.getElementById('root')
 );

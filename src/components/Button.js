@@ -1,11 +1,14 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class Button extends React.Component {
   render() {
     return (
-      <button onClick={this.props.onClick}>
-        送信
-      </button>
+      <RaisedButton
+        label="送信"
+        primary
+        onClick={this.props.onClick}
+      />
     );
   }
 }
