@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import TextField from 'material-ui/TextField';
 
 import { inputText, sendMessage } from '../actions';
 
 import TalkPane from './TalkPane';
 
 import Button from '../components/Button';
-import TextField from '../components/TextField';
 
 class App extends React.Component {
   render() {
     const { dispatch } = this.props;
-    const onChange = (text) => {
+    const onChange = (e, text) => {
       dispatch(inputText(text));
     };
     const onClick = () => {
@@ -21,6 +21,7 @@ class App extends React.Component {
     return (
       <div>
         <TextField
+          id="text-field"
           value={this.props.editingText}
           onChange={onChange}
         />
