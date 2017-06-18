@@ -5,6 +5,10 @@
   "repository": "git@github.com:kasaharu/Harmony.git",
   "author": "Wataru.Kasahara <kasahara1019@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --progress --colors",
+    "start": "webpack-dev-server --inline --hot"
+  },
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
